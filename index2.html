@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Study Planner</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li onclick="hidesidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+           
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="./index3.html">How to Study</a></li>
+            <li><a href="https://ndl.iitkgp.ac.in/">Library</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="./index.html"><img src="./logo.png" alt="website logo" height="30"> <h2 style="margin-left: 10px;">Study Planner</h2></a></li>
+            <li class="hideOnMobile"><a href="./index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="#About">About</a></li>
+            <li class="hideOnMobile"><a href="./index3.html">How to Study</a></li>
+            <li class="hideOnMobile"><a href="https://ndl.iitkgp.ac.in/">Library</a></li>
+            <li id="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <section>
+      <div class="container">
+        <div id="external-events"></div>
+        <div id="calendar"></div>
+        <aside id="graphPanel">
+          <h3>Today's Tasks</h3>
+          <canvas id="taskChart" width="300" height="300"></canvas>
+          <div id="graphInfo">
+            <p id="graphText">Completed: 0 / Remaining: 0 / Deleted: 0</p>
+          </div>
+        </aside>
+      </div>
+      <div id="eventModal" class="modal">
+        <div class="modal-content">
+          <h3 id="modalTitle">Create Event</h3>
+          <input type="text" id="eventTitle" placeholder="Event Title">
+          <div class="time-inputs">
+            <input type="time" id="startTime">
+            <span>-</span>
+            <input type="time" id="endTime">
+          </div>
+          <div class="days">
+            <button type="button" class="day-btn">S</button>
+            <button type="button" class="day-btn">M</button>
+            <button type="button" class="day-btn">T</button>
+            <button type="button" class="day-btn">W</button>
+            <button type="button" class="day-btn">T</button>
+            <button type="button" class="day-btn">F</button>
+            <button type="button" class="day-btn">S</button>
+          </div>
+           <textarea id="eventDetails" placeholder="Add details (optional)"></textarea>
+          <div class="modal-actions">
+            <button class="btn-primary" id="markCompleteBtn" style="display:none;">✅ Mark Complete</button>
+            <button class="btn-danger" id="deleteBtn" style="display:none;">Delete</button>
+            <button class="btn-secondary" id="cancelBtn" style="display:none;">Cancel</button>
+            <button class="btn-primary" id="saveEventBtn">Create</button>
+            <button class="btn-secondary" id="closeModalBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="script2.js"></script>
+    <footer></footer>
+</body>
+</html>

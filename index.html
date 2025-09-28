@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li onclick="hidesidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+           
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="./index3.html">How to Study</a></li>
+            <li><a href="https://ndl.iitkgp.ac.in/">Library</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="./index.html"><img src="./logo.png" alt="website logo" height="30"> <h2 style="margin-left: 10px;">Study Planner</h2></a></li>
+            <li class="hideOnMobile"><a href="./index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="#About">About</a></li>
+            <li class="hideOnMobile"><a href="./index3.html">How to Study</a></li>
+            <li class="hideOnMobile"><a href="https://ndl.iitkgp.ac.in/">Library</a></li>
+            <li id="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="fist">
+            <h1>Welcome To The Smart Study Planner</h1>
+            <a href="#ter" id="hypper"><input type="button" id="B1" value="Let's Start Planning"></a>
+            <ul id="list"><em>
+                <li>Set your Academic Calendar.</li>
+                <li>Set your Holidays.</li>
+                <li>Set your daily routine.</li>
+                <li>Add your courses.</li>
+                <li>And activites.</li>
+            </em></ul>
+        </div>
+        <div>
+            <img src="./pageOne.png" width="100%">
+        </div>
+        <div class="third" id="ter">
+            <div class="steps">
+                <span class="step active">Academic Calendar</span>
+                <span class="step">Holidays</span>
+                <span class="step">Awake</span>
+                <span class="step">Courses</span>
+                <span class="step">Activites</span>
+            </div>
+            <form id="multistepForm">
+                <div class="form active">
+                    <h2>Academic Calendar</h2><br>
+                    <p>Please Set starting months and ending months of the Academic Years.</p><br><br>
+                    <label for="mon_start">Select Starting month:</label>
+                    <input id="mon_start" type="month"><br><br>
+                    <label for="mon_end">Select ending month:</label>
+                    <input id="mon_end" type="month"><br><br>
+                    <button type="button" class="next">Next</button>
+                </div>
+                <div class="form">
+                    <h2>Set your holidays</h2>
+                    <div id="holiday-list"></div>
+                    <span id="add-holiday" class="add-link">+ Add another Holiday</span>
+                    <label><input type="checkbox"> I will study during this holiday</label>
+                    <div class="buttons">
+                        <button type="button" class="prev">Previous</button>
+                        <button type="button" class="next">Next</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <h2>Set your Awake and Sleep Time</h2>
+                    <p>Set your Awake and sleep time</p>
+                    <label>Wake up at:</label>
+                    <input type="time" id="wake-up-time"><br><br>
+                    <label>Sleep at:</label>
+                    <input type="time" id="sleep-time">
+                    <div class="buttons">
+                        <button type="button" class="prev">Previous</button>
+                        <button type="button" class="next">Next</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <h2>Courses</h2>
+                    <div id="course-list"></div>
+                    <span id="add-course" class="add-link">+ Add another Course</span>
+                    <div class="buttons">
+                        <button type="button" class="prev">Previous</button>
+                        <button type="button" class="next">Next</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <h2>Activities</h2>
+                    <div id="activity-list"></div>
+                    <span id="add-activity" class="add-link">+ Add another Activity</span>
+                    <div class="buttons">
+                        <button type="button" class="prev">Previous</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>
+            <img src="./pageOne1.png" width="100%">
+        </div>
+        <div class="third" id="About">
+            <h3>About Our Study Planner</h3><br><br>
+            <p>Welcome to the Smart Study Planner! We created this tool to help students navigate the complexities of academic life with a clear, organized approach.</p>
+            <ul>
+                <li>What We Do: Our planner is more than just a calendar; it's a comprehensive platform for academic organization. We help you take control of your schedule by allowing you to:</li>
+                <dl>
+                    <li>Set your academic year and mark all your holidays.</li>
+                    <li>Customize your daily routine with your specific wake-up and sleep times.</li>
+                    <li>Organize all your courses and activities in one central place.</li>
+                </dl>
+                <li>Our Mission: We believe that effective time management is the key to academic success. By providing you with a simple yet powerful tool, we aim to reduce stress and help you build a disciplined study routine. Our goal is to empower you to reach your full potential and achieve your study goals.</li>
+                <li>Why It Works: Our planner is built on the principles of time blocking and visual organization. The intuitive interface makes it easy to see your entire week at a glance, helping you identify opportunities for focused study and necessary breaks.</li>
+            </ul>
+            <p>Start your smarter study journey today and turn your aspirations into achievements! 🚀</p>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>
