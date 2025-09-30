@@ -205,7 +205,9 @@ textarea { resize: none; height: 70px; }
   background-color: #607d8b !important;
   border-color: #607d8b !important;
 }
-
+#menu-button {
+    display: none;
+}
 @media (max-width: 800px) {
     .hideOnMobile {
         display: none;
@@ -227,4 +229,5 @@ textarea { resize: none; height: 70px; }
     .sidebar {
         width: 100%;
     }
+
 }
